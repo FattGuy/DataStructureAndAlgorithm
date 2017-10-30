@@ -8,5 +8,8 @@
 
 import Foundation
 
-print("Hello, World!")
+let insert = InsertionSort()
+let array = [3,56,34,12,2,5,78,67,77]
+
+print(insert.insertionSort(array))
 
