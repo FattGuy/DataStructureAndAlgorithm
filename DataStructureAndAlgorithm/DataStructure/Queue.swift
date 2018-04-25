@@ -19,19 +19,19 @@ struct Queue<T> {
         return array.count
     }
     
+    public var front: T? {
+        return array.first
+    }
+    
     public mutating func enqueue(_ element: T) {
         array.append(element)
     }
     
     public mutating func dequeue() -> T? {
-        if array.isEmpty {
+        if isEmpty {
             return nil
         } else {
             return array.removeFirst()
         }
-    }
-    
-    public var front: T? {
-        return array.first
     }
 }
