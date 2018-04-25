@@ -19,16 +19,16 @@ struct Stack<T> {
         return array.count
     }
     
+    public var top: T? {
+        return array.last
+    }
+    
     public mutating func push(_ element: T) {
         array.append(element)
     }
     
-    public mutating func pop() -> T {
-        return array.removeLast()
-    }
-    
-    public var top: T? {
-        return array.last
+    public mutating func pop() -> T? {
+        return array.popLast()
     }
 }
 
