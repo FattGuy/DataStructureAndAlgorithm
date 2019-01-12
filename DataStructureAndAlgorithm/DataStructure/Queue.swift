@@ -9,29 +9,29 @@
 import Foundation
 
 struct Queue<T> {
-    fileprivate var array = [T]()
+    fileprivate var queue = [T]()
     
     public var isEmpty: Bool {
-        return array.isEmpty
+        return queue.isEmpty
     }
     
     public var count: Int {
-        return array.count
-    }
-    
-    public var front: T? {
-        return array.first
-    }
-    
-    public mutating func enqueue(_ element: T) {
-        array.append(element)
+        return queue.count
     }
     
     public mutating func dequeue() -> T? {
         if isEmpty {
             return nil
         } else {
-            return array.removeFirst()
+            return queue.removeFirst()
         }
+    }
+    
+    public mutating func enqueue(element: T) {
+        queue.append(element)
+    }
+    
+    public mutating func peek() -> T? {
+        return queue.first
     }
 }
