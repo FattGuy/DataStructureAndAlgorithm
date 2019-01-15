@@ -17,9 +17,9 @@ class BinarySearch {
         } else {
             let midIndex = low + (high - low) / 2
             if key > a[midIndex] {
-                return binarySearch(a, key: key, range: midIndex..<high)
+                return binarySearch(a, key: key, range: midIndex + 1..<high)
             } else if key < a[midIndex] {
-                return binarySearch(a, key: key, range: 0..<midIndex)
+                return binarySearch(a, key: key, range: low..<midIndex)
             } else{
                 return midIndex
             }
