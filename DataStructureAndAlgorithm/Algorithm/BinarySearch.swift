@@ -9,16 +9,18 @@
 import Foundation
 
 class BinarySearch {
-    func binarySearch<T: Comparable>(_ array: [T], key: T, range: Range<Int>) -> Int? {
-        if range.lowerBound >= range.upperBound {
+    func binarySearch<T: Comparable>(_ a: [T], key: T, range: Range<Int>) -> Int? {
+        let low = range.lowerBound
+        let high = range.upperBound
+        if low > high {
             return nil
         } else {
-            let midIndex = range.lowerBound + (range.upperBound - range.lowerBound) / 2
-            if array[midIndex] > key {
-                return binarySearch(array, key: key, range: range.lowerBound..<midIndex)
-            } else if array[midIndex] < key {
-                return binarySearch(array, key: key, range: midIndex + 1..<range.upperBound)
-            } else {
+            let midIndex = low + (high - low) / 2
+            if key > a[midIndex] {
+                return binarySearch(a, key: key, range: midIndex..<high)
+            } else if key < a[midIndex] {
+                return binarySearch(a, key: key, range: 0..<midIndex)
+            } else{
                 return midIndex
             }
         }
