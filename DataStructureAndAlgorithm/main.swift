@@ -10,9 +10,8 @@ import Foundation
 
 let array = [7, 2, 6, 3, 9]
 
-func mergeSort(_ array: [Int]) -> [Int] {
+func mergeSort<T: Comparable>(_ array: [T]) -> [T] {
     // 1
-    print(array)
     guard array.count > 1 else { return array }
     
     let middleIndex = array.count / 2
@@ -20,12 +19,13 @@ func mergeSort(_ array: [Int]) -> [Int] {
     // 2
     let leftArray = mergeSort(Array(array[0..<middleIndex]))
     let rightArray = mergeSort(Array(array[middleIndex..<array.count]))
-    
+    print("1",leftArray, rightArray)
+//    print("2", merge(leftArray, rightArray))
     return merge(leftArray, rightArray)
 }
 
-func merge(_ left: [Int], _ right: [Int]) -> [Int] {
-    var orderedArray = [Int]()
+func merge<T: Comparable>(_ left: [T], _ right: [T]) -> [T] {
+    var orderedArray = [T]()
     var leftIndex = 0
     var rightIndex = 0
     // 1
@@ -60,6 +60,7 @@ func merge(_ left: [Int], _ right: [Int]) -> [Int] {
         rightIndex += 1
     }
     
+    print("2", orderedArray)
     return orderedArray
 }
 
