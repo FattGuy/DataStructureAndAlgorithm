@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B35689042218C7B9000C4257 /* BoyerMooreStringSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35689032218C7B9000C4257 /* BoyerMooreStringSearch.swift */; };
 		F219EE781FA7A08700AE4917 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F219EE771FA7A08700AE4917 /* main.swift */; };
 		F219EE801FA7A31500AE4917 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F219EE7E1FA7A31500AE4917 /* Stack.swift */; };
 		F219EE811FA7A31500AE4917 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F219EE7F1FA7A31500AE4917 /* Queue.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B35689032218C7B9000C4257 /* BoyerMooreStringSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyerMooreStringSearch.swift; sourceTree = "<group>"; };
 		F219EE741FA7A08700AE4917 /* DataStructureAndAlgorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructureAndAlgorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		F219EE771FA7A08700AE4917 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F219EE7E1FA7A31500AE4917 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				F2D34AAB1FABB384002811E6 /* BinarySearch.swift */,
 				F26CE9911FACB798009F5D06 /* BinarySearchTree.swift */,
 				F2E772842212457000D38413 /* MergeSort.swift */,
+				B35689032218C7B9000C4257 /* BoyerMooreStringSearch.swift */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				F2E772852212457000D38413 /* MergeSort.swift in Sources */,
 				F219EE781FA7A08700AE4917 /* main.swift in Sources */,
 				F2D34AAC1FABB384002811E6 /* BinarySearch.swift in Sources */,
+				B35689042218C7B9000C4257 /* BoyerMooreStringSearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
