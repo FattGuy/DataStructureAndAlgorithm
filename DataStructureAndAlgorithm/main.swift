@@ -8,6 +8,5 @@
 
 import Foundation
 
-let s = "bread"
-let index = s.indexOf("ad")?.encodedOffset
-print(index!)
+let s = [5, 2, 4, 7]
+
