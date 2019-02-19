@@ -9,13 +9,13 @@
 import Foundation
 
 class CountOccurence {
-    func countOccurrencesOfKey<T: Equatable>(_ array: [T], object: T) -> Int? {
+    func countOccurrencesOfKey(_ array: [Int], object: Int) -> Int? {
         func leftBoundary() -> Int? {
             var low = 0
             var high = array.count
             while low < high {
                 let midIndex = low + (high - low)/2
-                if a[midIndex] < object {
+                if array[midIndex] < object {
                     low = midIndex + 1
                 } else {
                     high = midIndex
@@ -30,7 +30,7 @@ class CountOccurence {
             var high = array.count
             while low < high {
                 let midIndex = low + (high - low)/2
-                if a[midIndex] > object {
+                if array[midIndex] > object {
                     high = midIndex
                 } else {
                     low = midIndex + 1

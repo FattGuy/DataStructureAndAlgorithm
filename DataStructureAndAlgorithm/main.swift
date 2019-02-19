@@ -8,5 +8,5 @@
 
 import Foundation
 
-let s = [5, 2, 4, 7]
+
 
