@@ -8,5 +8,9 @@
 
 import Foundation
 
+var union = UnionFind<Int>()
+union.addSetWith(2)
+union.addSetWith(7)
+union.addSetWith(4)
 
-
+print(union.setOf(4) ?? 0)
