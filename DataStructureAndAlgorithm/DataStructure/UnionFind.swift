@@ -28,11 +28,32 @@ public struct UnionFind<T: Hashable> {
     }
     
     private mutating func setByIndex(_ index: Int) -> Int {
-        if parent[index] == index {  // 1
-            return index
+        if index != parent[index] {
+            // Updating parent index while looking up the index of parent.
+            parent[index] = setByIndex(parent[index])
+        }
+        return parent[index]
+    }
+    
+    public mutating func inSameSet(_ firstElement: T, and secondElement: T) -> Bool {
+        if let firstSet = setOf(firstElement), let secondSet = setOf(secondElement) {
+            return firstSet == secondSet
         } else {
-            parent[index] = setByIndex(parent[index])  // 2
-            return parent[index]       // 3
+            return false
+        }
+    }
+    
+    public mutating func unionSetsContaining(_ firstElement: T, and secondElement: T) {
+        if let firstSet = setOf(firstElement), let secondSet = setOf(secondElement) { // 1
+            if firstSet != secondSet {                // 2
+                if size[firstSet] < size[secondSet] { // 3
+                    parent[firstSet] = secondSet      // 4
+                    size[secondSet] += size[firstSet] // 5
+                } else {
+                    parent[secondSet] = firstSet
+                    size[firstSet] += size[secondSet]
+                }
+            }
         }
     }
 }
