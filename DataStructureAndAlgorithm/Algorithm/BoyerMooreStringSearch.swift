@@ -9,6 +9,7 @@
 import Foundation
 
 extension String {
+    //Brute-Force String Search
     func indexOf(_ pattern: String) -> String.Index? {
         for i in self.indices {
             var j = i
