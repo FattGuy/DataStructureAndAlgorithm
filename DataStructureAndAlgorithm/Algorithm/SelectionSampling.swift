@@ -37,4 +37,25 @@ class SelectionSampling {
         
         return result
     }
+    
+    func selectFromProbability<T>(from a: [T], count requested: Int) -> [T] {
+        var examinted = 0
+        var selected = 0
+        var b = [T]()
+        
+        while selected < requested {
+            let r = Double(arc4random()) / 0x100000000
+            
+            let leftToExamine = a.count - examinted
+            let leftToAdd = requested - selected
+            
+            if Double(leftToExamine) * r < Double(leftToAdd) {
+                selected += 1
+                b.append(a[examinted])
+            }
+            
+            examinted += 1
+        }
+        return b
+    }
 }
