@@ -8,9 +8,8 @@
 
 import Foundation
 
-var union = UnionFind<Int>()
-union.addSetWith(2)
-union.addSetWith(7)
-union.addSetWith(4)
+let a = "color"
+let b = "co"
 
-print(union.unionSetsContaining(2, and: 4))
+
+print(a.longestCommonSubsequence(b))
