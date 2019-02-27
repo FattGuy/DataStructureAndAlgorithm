@@ -11,7 +11,7 @@ import Foundation
 extension String {
     public func longestCommonSubsequence(_ other: String) -> String {
         func lcsLength(other: String) -> [[Int]] {
-            var matrix = [[Int]](repeating: [Int](repeating: 0, count: other.count + 1), count: self.count - 1)
+            var matrix = [[Int]](repeating: [Int](repeating: 0, count: other.count + 1), count: self.count + 1)
             for (i, selfChar) in self.enumerated() {
                 for (j, otherChar) in other.enumerated() {
                     if otherChar == selfChar {
