@@ -8,19 +8,29 @@
 
 import Foundation
 
-let list = [ 10, 0, 3, 9, 2, 14, 8, 27, 1, 5, 8, -1, 26 ]
+var list = [ 10, 0, 3, 9, 2, 14, 8, 27, 1, 5, 8, -1, 26 ]
 
-func quickSort<T: Comparable>(a: [T]) -> [T] {
-    if a.count <= 1 {
-        return a
-    } else {
-        let pivot = a[a.count / 2]
-        let less = a.filter({ $0 < pivot })
-        let equal = a.filter({ $0 == pivot })
-        let greater = a.filter({ $0 > pivot })
-        
-        return quickSort(a: less) + equal + quickSort(a: greater)
+func partitionLomuto<T: Comparable>(a: inout [T], low: Int, high: Int) -> Int {
+    let pivot = a[high]
+    
+    var i = low
+    for j in low..<high {
+        if a[j] <= pivot {
+            (a[i], a[j]) = (a[j], a[i])
+            i += 1
+        }
+    }
+    
+    (a[i], a[high]) = (a[high], a[i])
+    return i
+}
+
+func quickSortLomuto<T: Comparable>(a: inout [T], low: Int, high: Int){
+    if low < high {
+        let p = partitionLomuto(a: &a, low: low, high: high)
+        quickSortLomuto(a: &a, low: low, high: p - 1)
+        quickSortLomuto(a: &a, low: p + 1, high: high)
     }
 }
 
-print(quickSort(a: list))
+print(quickSortLomuto(a: &list, low: 0, high: list.count - 1))
