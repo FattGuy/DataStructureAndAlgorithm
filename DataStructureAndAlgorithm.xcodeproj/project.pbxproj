@@ -22,6 +22,7 @@
 		F219EE851FA7A33900AE4917 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F219EE841FA7A33900AE4917 /* InsertionSort.swift */; };
 		F25734982222E55B00B6AE37 /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25734972222E55B00B6AE37 /* UnionFind.swift */; };
 		F26CE9921FACB798009F5D06 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26CE9911FACB798009F5D06 /* BinarySearchTree.swift */; };
+		F2A08640222ABEC00095CC4D /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A0863F222ABEC00095CC4D /* QuickSort.swift */; };
 		F2D34AAC1FABB384002811E6 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D34AAB1FABB384002811E6 /* BinarySearch.swift */; };
 		F2E772852212457000D38413 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E772842212457000D38413 /* MergeSort.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		F219EE841FA7A33900AE4917 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
 		F25734972222E55B00B6AE37 /* UnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
 		F26CE9911FACB798009F5D06 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		F2A0863F222ABEC00095CC4D /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
 		F2D34AAB1FABB384002811E6 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 		F2E772842212457000D38413 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 				B3F0E6682224D29300B40A52 /* LongestCommonSubsequence.swift */,
 				B3F0E66A2226204000B40A52 /* SelectionSort.swift */,
 				B3F0E66C2226255B00B40A52 /* ShellSort.swift */,
+				F2A0863F222ABEC00095CC4D /* QuickSort.swift */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				B3F0E6692224D29300B40A52 /* LongestCommonSubsequence.swift in Sources */,
 				F2E772852212457000D38413 /* MergeSort.swift in Sources */,
 				F219EE781FA7A08700AE4917 /* main.swift in Sources */,
+				F2A08640222ABEC00095CC4D /* QuickSort.swift in Sources */,
 				B3F0E66B2226204000B40A52 /* SelectionSort.swift in Sources */,
 				B3BD966D221BA51B00C87008 /* SelectMinimumMaximum.swift in Sources */,
 				F2D34AAC1FABB384002811E6 /* BinarySearch.swift in Sources */,
