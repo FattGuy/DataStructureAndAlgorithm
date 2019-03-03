@@ -22,7 +22,7 @@ class QuickSort {
         }
     }
     
-    func partitionLomuto<T: Comparable>( a: inout [T], low: Int, high: Int) -> Int {
+    func partitionLomuto<T: Comparable>(a: inout [T], low: Int, high: Int) -> Int {
         let pivot = a[high]
         
         var i = low
@@ -38,7 +38,7 @@ class QuickSort {
         return 0
     }
     
-    func partitionHoare<T: Comparable>( a: inout [T], low: Int, high: Int) -> Int {
+    func partitionHoare<T: Comparable>(a: inout [T], low: Int, high: Int) -> Int {
         let pivot = a[low]
         var i = low - 1
         var j = high + 1
@@ -63,7 +63,7 @@ class QuickSort {
         }
     }
     
-    func quicksortHoare<T: Comparable>( a: inout [T], low: Int, high: Int) {
+    func quicksortHoare<T: Comparable>(a: inout [T], low: Int, high: Int) {
         if low < high {
             let p = partitionHoare(a: &a, low: low, high: high)
             quicksortHoare(a: &a, low: low, high: p)
@@ -71,7 +71,7 @@ class QuickSort {
         }
     }
     
-    func quicksortRandom<T: Comparable>( a: inout [T], low: Int, high: Int) {
+    func quicksortRandom<T: Comparable>(a: inout [T], low: Int, high: Int) {
         if low < high {
             let pivotIndex = Int.random(in: low...high)        // 1
             
@@ -80,6 +80,47 @@ class QuickSort {
             let p = partitionLomuto(a: &a, low: low, high: high)
             quicksortRandom(a: &a, low: low, high: p - 1)
             quicksortRandom(a: &a, low: p + 1, high: high)
+        }
+    }
+    
+    /*
+     Swift's swap() doesn't like it if the items you're trying to swap refer to
+     the same memory location. This little wrapper simply ignores such swaps.
+     */
+    public func swap<T>(a: inout [T], _ i: Int, _ j: Int) {
+        if i != j {
+            a.swapAt(i, j)
+        }
+    }
+    
+    func partitionDutchFlag<T: Comparable>(a: inout [T], low: Int, high: Int, pivotIndex: Int) -> (Int, Int) {
+        let pivot = a[pivotIndex]
+        
+        var smaller = low
+        var equal = low
+        var larger = high
+        
+        while equal <= larger {
+            if a[equal] < pivot {
+                swap(a: &a, smaller, equal)
+                smaller += 1
+                equal += 1
+            } else if a[equal] == pivot {
+                equal += 1
+            } else {
+                swap(a: &a, equal, larger)
+                larger -= 1
+            }
+        }
+        return (smaller, larger)
+    }
+    
+    func quicksortDutchFlag<T: Comparable>( a: inout [T], low: Int, high: Int) {
+        if low < high {
+            let pivotIndex = Int.random(in: low...high)
+            let (p, q) = partitionDutchFlag(a: &a, low: low, high: high, pivotIndex: pivotIndex)
+            quicksortDutchFlag(a: &a, low: low, high: p - 1)
+            quicksortDutchFlag(a: &a, low: q + 1, high: high)
         }
     }
 }
