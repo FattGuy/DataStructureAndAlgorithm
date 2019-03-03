@@ -38,11 +38,48 @@ class QuickSort {
         return 0
     }
     
+    func partitionHoare<T: Comparable>( a: inout [T], low: Int, high: Int) -> Int {
+        let pivot = a[low]
+        var i = low - 1
+        var j = high + 1
+        
+        while true {
+            repeat { j -= 1 } while a[j] > pivot
+            repeat { i += 1 } while a[i] < pivot
+            
+            if i < j {
+                a.swapAt(i, j)
+            } else {
+                return j
+            }
+        }
+    }
+    
     func quickSortLomuto<T: Comparable>(a: inout [T], low: Int, high: Int){
         let p = partitionLomuto(a: &a, low: low, high: high)
         if low < high {
             quickSortLomuto(a: &a, low: low, high: p - 1)
             quickSortLomuto(a: &a, low: p + 1, high: high)
+        }
+    }
+    
+    func quicksortHoare<T: Comparable>( a: inout [T], low: Int, high: Int) {
+        if low < high {
+            let p = partitionHoare(a: &a, low: low, high: high)
+            quicksortHoare(a: &a, low: low, high: p)
+            quicksortHoare(a: &a, low: p + 1, high: high)
+        }
+    }
+    
+    func quicksortRandom<T: Comparable>( a: inout [T], low: Int, high: Int) {
+        if low < high {
+            let pivotIndex = Int.random(in: low...high)        // 1
+            
+            (a[pivotIndex], a[high]) = (a[high], a[pivotIndex])  // 2
+            
+            let p = partitionLomuto(a: &a, low: low, high: high)
+            quicksortRandom(a: &a, low: low, high: p - 1)
+            quicksortRandom(a: &a, low: p + 1, high: high)
         }
     }
 }
