@@ -17,13 +17,11 @@ class ShellSort {
                 
                 guard index + sublistCount < list.count else { break }
                 if list[index] > list[index + sublistCount] {
-                    list.swapAt(index, index + sublistCount)
-                }
+                    list.swapAt(index, index + sublistCount)          }
                 
                 guard sublistCount == 1 && index > 0 else { continue }
                 if list[index - 1] > list[index] {
-                    list.swapAt(index - 1, index)
-                }
+                    list.swlist.swapAt(index - 1, index)   }
             }
             
             sublistCount = sublistCount / 2
