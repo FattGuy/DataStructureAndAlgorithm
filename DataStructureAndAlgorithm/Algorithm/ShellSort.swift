@@ -21,7 +21,9 @@ class ShellSort {
                 
                 guard sublistCount == 1 && index > 0 else { continue }
                 if list[index - 1] > list[index] {
-                    list.swlist.swapAt(index - 1, index)   }
+                    list.swapAt(index - 1, index)
+                    
+                }
             }
             
             sublistCount = sublistCount / 2
