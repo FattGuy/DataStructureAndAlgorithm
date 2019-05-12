@@ -25,6 +25,8 @@
 		F243D3A922875238005E585E /* OrderedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F243D3A822875238005E585E /* OrderedArray.swift */; };
 		F243D3AB22876912005E585E /* RootishArrayStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F243D3AA22876912005E585E /* RootishArrayStack.swift */; };
 		F25734982222E55B00B6AE37 /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25734972222E55B00B6AE37 /* UnionFind.swift */; };
+		F2669FD92288C1AF009ECF68 /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669FD82288C1AF009ECF68 /* Deque.swift */; };
+		F2669FDB2288D011009ECF68 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669FDA2288D011009ECF68 /* PriorityQueue.swift */; };
 		F26CE9921FACB798009F5D06 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26CE9911FACB798009F5D06 /* BinarySearchTree.swift */; };
 		F2A08640222ABEC00095CC4D /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A0863F222ABEC00095CC4D /* QuickSort.swift */; };
 		F2A08642222C1BAA0095CC4D /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A08641222C1BAA0095CC4D /* HeapSort.swift */; };
@@ -65,6 +67,8 @@
 		F243D3A822875238005E585E /* OrderedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedArray.swift; sourceTree = "<group>"; };
 		F243D3AA22876912005E585E /* RootishArrayStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootishArrayStack.swift; sourceTree = "<group>"; };
 		F25734972222E55B00B6AE37 /* UnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
+		F2669FD82288C1AF009ECF68 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
+		F2669FDA2288D011009ECF68 /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		F26CE9911FACB798009F5D06 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		F2A0863F222ABEC00095CC4D /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
 		F2A08641222C1BAA0095CC4D /* HeapSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSort.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				F223FA67226BEDB3001A0307 /* FixedSizeArray.swift */,
 				F243D3A822875238005E585E /* OrderedArray.swift */,
 				F243D3AA22876912005E585E /* RootishArrayStack.swift */,
+				F2669FD82288C1AF009ECF68 /* Deque.swift */,
+				F2669FDA2288D011009ECF68 /* PriorityQueue.swift */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 				F219EE811FA7A31500AE4917 /* Queue.swift in Sources */,
 				B3F0E66D2226255B00B40A52 /* ShellSort.swift in Sources */,
 				B31400DF22223A4B00FBF176 /* SelectionSampling.swift in Sources */,
+				F2669FD92288C1AF009ECF68 /* Deque.swift in Sources */,
 				F2A08644222C1C5C0095CC4D /* Heap.swift in Sources */,
 				B3F0E6692224D29300B40A52 /* LongestCommonSubsequence.swift in Sources */,
 				F243D3AB22876912005E585E /* RootishArrayStack.swift in Sources */,
@@ -230,6 +237,7 @@
 				F223FA68226BEDB3001A0307 /* FixedSizeArray.swift in Sources */,
 				F2D34AAC1FABB384002811E6 /* BinarySearch.swift in Sources */,
 				B35689042218C7B9000C4257 /* BoyerMooreStringSearch.swift in Sources */,
+				F2669FDB2288D011009ECF68 /* PriorityQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
