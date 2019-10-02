@@ -12,17 +12,17 @@ class SelectionSortNEW {
     func selectionSorting(_ nums: [Int]) -> [Int] {
         guard !nums.isEmpty else { return [] }
         
-        var res = [Int]()
+        var res = nums
         
-        for i in 0..<nums.count - 1 {
+        for i in 0..<res.count - 1 {
             var max = i
-            for j in (i + 1)..<nums.count {
-                if nums[max] < nums[j] {
+            for j in (i + 1)..<res.count {
+                if res[max] < res[j] {
                     max = j
                 }
             }
             
-            nums.swapAt(j, max)
+            res.swapAt(i, max)
         }
         
         return res
