@@ -10,7 +10,11 @@
 import Foundation
 
 class SumFunc {
-    func sum() {
+    func sum(_ nums: [Int]) -> Int {
+        guard !nums.isEmpty else {
+            return 0
+        }
         
+        return nums.first! + sum(Array(nums.dropFirst()))
     }
 }
