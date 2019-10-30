@@ -17,4 +17,12 @@ class SumFunc {
         
         return nums.first! + sum(Array(nums.dropFirst()))
     }
+    
+    func numOfItemsInListSum(_ nums: [Int]) -> Int {
+        guard !nums.isEmpty else {
+            return 0
+        }
+        
+        return nums.first! + sum(Array(nums.dropFirst()))
+    }
 }
